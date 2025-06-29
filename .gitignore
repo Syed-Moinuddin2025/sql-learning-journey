@@ -33,3 +33,44 @@ Thumbs.db
 
 # Python packaging
 *.egg-info/
+
+*.ssms
+*.sublime-workspace
+*.sublime-project   
+# Coverage reports
+.coverage   
+.coverage.*
+*.coveragerc    
+# Pytest cache
+.pytest_cache/  
+# MyPy cache
+.mypy_cache/    
+# Sphinx documentation
+_build/ 
+# Jupyter Notebook metadata
+.ipynb_checkpoints/ 
+# PyCharm project files
+
+.ssms/
+.idea/  
+# VS Code settings
+.vscode/        
+# Local configuration files
+*.local
+*.env.local 
+# Environment variables
+.env
+.envrc  
+# Python virtual environments
+.venv/
+# Conda environments
+
+.conda/
+# PyInstaller
+dist/   
+build/
+*.spec  
+# Cython debug symbols
+cython_debug/   
+# Coverage reports
+.coverage
