@@ -59,7 +59,28 @@ A complete employee database system with HR-focused query practice.
 🚧 Next Steps: Advanced HR reports (attendance, promotions)
 
 ---
+### 3️⃣ 📁 Project3_MovieRatings
 
+Analyze and manage movie ratings and production companies.
+
+What you’ll learn:
+
+Using joins across multiple tables (movies, companies, ratings)
+
+Applying filters, grouping, and aggregate functions
+
+Importing and cleaning real-world CSV data
+
+📄 Files:
+
+01_create_tables.sql
+
+02_import_data.sql
+
+03_queries_analysis.sql
+
+README.md
+---
 ### 🚧 [📁 Project\_SalesAnalytics](./Project3_SalesAnalytics)
 
 **Coming soon:** Sales analytics project involving KPIs, time-based queries, and advanced aggregation.
