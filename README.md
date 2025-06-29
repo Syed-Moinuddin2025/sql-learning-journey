@@ -60,7 +60,7 @@ A complete employee database system with HR-focused query practice.
 
 ---
 
-### 🚧 [📁 Project3\_SalesAnalytics](./Project3_SalesAnalytics)
+### 🚧 [📁 Project\_SalesAnalytics](./Project3_SalesAnalytics)
 
 **Coming soon:** Sales analytics project involving KPIs, time-based queries, and advanced aggregation.
 
