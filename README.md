@@ -1,17 +1,15 @@
 
-
-
-# 📊 **SQL-Learning-Journey**
+# 📊 **SQL Learning Journey**
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Syed-Moinuddin2025/sql_journey/main/images/image1.png" alt="SQL Journey Banner" width="1000" height="600">
+  <img src="https://raw.githubusercontent.com/Syed-Moinuddin2025/sql-learning-journey/main/images/image1.png" alt="SQL Learning Journey Banner" width="1000" height="600">
 </div>
 
 ---
 
 ## 🧠 About This Repository
 
-Welcome to **SQL Journey**, a hands-on learning repository created for practicing SQL queries with real-world business data.
+Welcome to **SQL Learning Journey**, a hands-on learning repository created for practicing SQL queries with real-world business data.
 
 It is ideal for:
 
@@ -23,7 +21,7 @@ It is ideal for:
 
 ## 📁 Projects Included
 
-### [📁 Project1\_Inventory](./Project1_Inventory)
+### 1️⃣ [📁 Project 1 – Inventory](./1_project1_inventory)
 
 A mini inventory system featuring Categories and Products tables.
 
@@ -35,55 +33,71 @@ A mini inventory system featuring Categories and Products tables.
 
 📂 Files:
 
-* [`01_create_tables.sql`](./Project1_Inventory/01_create_tables.sql)
-* [`02_insert_data.sql`](./Project1_Inventory/02_insert_data.sql)
-* [`03_basic_queries.sql`](./Project1_Inventory/03_basic_queries.sql)
-* [`04_Basic_Inventory_Queries_Result.ipynb`](./Project1_Inventory/04_Basic_Inventory_Queries_Result.ipynb)
-* [`Readme.md`](./Project1_Inventory/Readme.md)
+* [`01_create_tables.sql`](./1_project1_inventory/01_create_tables.sql)
+* [`02_insert_data.sql`](./1_project1_inventory/02_insert_data.sql)
+* [`03_basic_queries.sql`](./1_project1_inventory/03_basic_queries.sql)
+* [`04_Basic_Inventory_Queries_Result.ipynb`](./1_project1_inventory/04_Basic_Inventory_Queries_Result.ipynb)
+* [`Readme.md`](./1_project1_inventory/Readme.md)
 
 ---
 
-### [📁 Project2\_EmployeeRecords](./Project2_EmployeeRecords)
+### 2️⃣ [📁 Project 2 – Employee Records](./2_project2_employeerecords)
 
 A complete employee database system with HR-focused query practice.
 
 📄 Files:
 
-* [`01_create_tables.sql`](./Project2_EmployeeRecords/01_create_tables.sql)
-* [`02_insert_data.sql`](./Project2_EmployeeRecords/02_insert_data.sql)
-* [`03_basic_queries.sql`](./Project2_EmployeeRecords/03_basic_queries.sql)
-* [`04_intermediate_queries.sql`](./Project2_EmployeeRecords/04_intermediate_queries.sql)
-* [`05_Employee_Queries_Result.ipynb`](./Project2_EmployeeRecords/05_Employee_Queries_Result.ipynb)
-* [`README.md`](./Project2_EmployeeRecords/README.md)
+* [`01_create_tables.sql`](./2_project2_employeerecords/01_create_tables.sql)
+* [`02_insert_data.sql`](./2_project2_employeerecords/02_insert_data.sql)
+* [`03_basic_queries.sql`](./2_project2_employeerecords/03_basic_queries.sql)
+* [`04_intermediate_queries.sql`](./2_project2_employeerecords/04_intermediate_queries.sql)
+* [`05_Employee_Queries_Result.ipynb`](./2_project2_employeerecords/05_Employee_Queries_Result.ipynb)
+* [`README.md`](./2_project2_employeerecords/README.md)
 
 🚧 Next Steps: Advanced HR reports (attendance, promotions)
 
 ---
-### 3️⃣ 📁 Project3_MovieRatings
+
+### 3️⃣ [📁 Project 3 – Movie Ratings](./3_project3_movieratings)
 
 Analyze and manage movie ratings and production companies.
 
-What you’ll learn:
+**What you’ll learn:**
 
-Using joins across multiple tables (movies, companies, ratings)
-
-Applying filters, grouping, and aggregate functions
-
-Importing and cleaning real-world CSV data
+* Using joins across multiple tables (movies, companies, ratings)
+* Applying filters, grouping, and aggregate functions
+* Importing and cleaning real-world CSV data
 
 📄 Files:
 
-01_create_tables.sql
+* [`01_create_tables.sql`](./3_project3_movieratings/01_create_tables.sql)
+* [`02_import_data.sql`](./3_project3_movieratings/02_import_data.sql)
+* [`03_queries_analysis.sql`](./3_project3_movieratings/03_queries_analysis.sql)
+* [`README.md`](./3_project3_movieratings/README.md)
 
-02_import_data.sql
-
-03_queries_analysis.sql
-
-README.md
 ---
-### 🚧 [📁 Project\_SalesAnalytics](./Project3_SalesAnalytics)
 
-**Coming soon:** Sales analytics project involving KPIs, time-based queries, and advanced aggregation.
+### 4️⃣ [📁 Project 4 – SQL Full Course](./4_sql_full_course)
+
+🚧 Under development – includes beginner to intermediate modules
+
+---
+
+### 5️⃣ [📁 Project 5 – Employees Sales Record](./5_employees_sales_record)
+
+🚧 Planned project to analyze departmental sales using joins and grouping
+
+---
+
+### 6️⃣ [📁 Project 6 – Pizza Sales](./6_pizza_sales_sql)
+
+🚧 Planned project to analyze fast food orders using group by, top sales, and KPIs
+
+---
+
+### 7️⃣ [📁 Project 7 – Retail Sales Analytics P1](./7_retail_sales_analysis_p1)
+
+🚧 A time-series and trend-based sales analytics SQL project
 
 ---
 
