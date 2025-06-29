@@ -1,11 +1,5 @@
 -- Rename the column first (uncomment the appropriate line for your DBMS):
 
--- For SQL Server:
---EXEC sp_rename 'movies.rating', 'ratings', 'COLUMN';
-
--- For PostgreSQL or MySQL 8+:
---ALTER TABLE movies RENAME COLUMN imdb_rating TO rating;
-
 -- Now run your queries after the column has been renamed:
 SELECT * FROM movies;
 
