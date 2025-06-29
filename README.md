@@ -1,5 +1,7 @@
 # SQL Journey 🚀
 
+<img src="https://github.com/Syed-Moinuddin2025/sql_journey/blob/main/images/image1.png?raw=true" alt="SQL Journey Image" />
+
 Welcome to `sql_journey` – a beginner-friendly, step-by-step SQL learning path.
 
 This folder contains hands-on examples, notes, and practice exercises to help you become confident in SQL using real-world scenarios.
