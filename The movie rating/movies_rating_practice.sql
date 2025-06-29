@@ -28,22 +28,6 @@ GROUP BY d_company.company_name;
 EXEC sp_help 'movies';
 EXEC sp_help 'd_company';
 
--- For MySQL:
--- DESCRIBE movies;
--- DESCRIBE d_company;
-
--- For PostgreSQL:
--- \d movies
--- \d d_company
-
--- ALTER TABLE movies
--- ALTER COLUMN d_company_id INT;
-
--- ALTER TABLE movies
--- ADD CONSTRAINT fk_movies_d_company
--- FOREIGN KEY (d_company_id)
--- REFERENCES d_company(id);
-
 
 
 SELECT TOP 10
