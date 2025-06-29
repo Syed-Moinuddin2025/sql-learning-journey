@@ -45,6 +45,7 @@ This is the working database where all exercises and examples will be executed.
 | 12  | `12_group_by_clause_summary_results.ipynb`         | Jupyter Notebook showing grouped summary results                |
 | 13  | `13_join_customers_orders_with_sorting.sql`        | Joins between customers and orders with `ORDER BY` clause       |
 | 14  | `14_join_results.ipynb`                            | Jupyter Notebook showing join queries and results               |
+|15  | '15_revision_of_ queries.sql'                       | revision of queries.sql                                         |
 ---
 
 ## 🚀 How to Use
