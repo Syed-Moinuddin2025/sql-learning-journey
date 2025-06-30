@@ -1,4 +1,3 @@
-
 # 📊 **SQL Learning Journey**
 
 <div align="center">
