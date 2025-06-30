@@ -1,29 +1,4 @@
--- Drop FK from Payments → Bookings
-ALTER TABLE Payments DROP CONSTRAINT FK_Payments_Bookings;
 
--- Drop FKs from Bookings → Customers, Trips
-ALTER TABLE Bookings DROP CONSTRAINT FK_Bookings_Customers;
-ALTER TABLE Bookings DROP CONSTRAINT FK_Bookings_Trips;
-
-
--- Drop PKs
-ALTER TABLE Customers DROP CONSTRAINT PK_Customers;
-ALTER TABLE Trips DROP CONSTRAINT PK_Trips;
-ALTER TABLE Bookings DROP CONSTRAINT PK_Bookings;
-ALTER TABLE Payments DROP CONSTRAINT PK_Payments;
-
-SELECT 
-    kc.name AS ConstraintName,
-    t.name AS TableName
-FROM 
-    sys.key_constraints kc
-JOIN 
-    sys.tables t ON kc.parent_object_id = t.object_id
-WHERE 
-    kc.type = 'PK';
-
-ALTER TABLE Payments
-DROP CONSTRAINT [PK__Payments__9B556A58773339C9];
 
 DROP TABLE IF EXISTS Payments;
 DROP TABLE IF EXISTS Bookings;
@@ -115,14 +90,3 @@ FROM Bookings;
 SELECT COUNT(*) FROM Payments;
 SELECT TOP 10 * FROM Payments ORDER BY PaymentDate DESC;
 
-UPDATE Payments
-SET PaymentMode = 'Cash'
-WHERE PaymentMode IS NULL;
-
-SELECT * FROM Customers;
-
-SELECT * FROM Trips;
-
-SELECT * FROM Bookings;
-
-SELECT * FROM Payments;
