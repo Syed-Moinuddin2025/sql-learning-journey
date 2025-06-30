@@ -24,9 +24,9 @@ CREATE TABLE Payments (
     BookingID INT,
     AmountPaid DECIMAL(10,2) NOT NULL,
     PaymentMode VARCHAR(50),
-    PaymentDate DATEtime default current_timestamp,
+    PaymentDate DATETIME CONSTRAINT DF_Payments_PaymentDate DEFAULT GETDATE(),
     FOREIGN KEY (BookingID) REFERENCES Bookings(BookingID)
-)
+);
 
 -- Q17: Add check constraint to payments for allowed payment modes 
 ALTER TABLE Payments ADD CONSTRAINT chk_payment_mode
@@ -36,7 +36,8 @@ CHECK (PaymentMode IN ('UPI', 'Credit Card', 'Net Banking', 'Cash'));
 create index idx_destination on trips(destination);
 
 -- Q19: Drop check costrainst on rpice if it exists
-alter table trips drop check chk_price_positive;
+ALTER TABLE Trips
+DROP CONSTRAINT chk_price_positive;
 
 -- Q 20 : Drop the payments table entirely
 drop table if exists payments;
