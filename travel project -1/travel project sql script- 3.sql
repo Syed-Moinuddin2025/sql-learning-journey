@@ -18,27 +18,32 @@ EXEC sp_rename 'Customers.Phone', 'Mobile', 'COLUMN';
 ALTER TABLE Trips
 ALTER COLUMN Price DECIMAL(12, 2);
 
--- Q 16: Add a table payments for tracking booking payments 
-CREATE TABLE Payments (
+-- Q 16: Create Payment table with foreign key to bookings
+-- Note: The original code snippet had a commented-out section for creating the Payments table.
+-- The following code creates the Payments table with the specified constraints.
+ CREATE TABLE Payments (
     PaymentID INT PRIMARY KEY,
     BookingID INT,
     AmountPaid DECIMAL(10,2) NOT NULL,
     PaymentMode VARCHAR(50),
-    PaymentDate DATETIME CONSTRAINT DF_Payments_PaymentDate DEFAULT GETDATE(),
-    FOREIGN KEY (BookingID) REFERENCES Bookings(BookingID)
+    PaymentDate DATETIME DEFAULT GETDATE(),
+    CONSTRAINT FK_Payments_Bookings FOREIGN KEY (BookingID)
+        REFERENCES Bookings(BookingID),
+    CONSTRAINT CHK_PaymentMode CHECK (PaymentMode IN ('UPI', 'Credit Card', 'Net Banking', 'Cash'))
 );
 
--- Q17: Add check constraint to payments for allowed payment modes 
-ALTER TABLE Payments ADD CONSTRAINT chk_payment_mode
-CHECK (PaymentMode IN ('UPI', 'Credit Card', 'Net Banking', 'Cash'));
+
+-- Q 17: Add a default value for triptype in trips
+ 
+
 
 -- Q 18: Add index on destination in trips to improve search speed
 create index idx_destination on trips(destination);
 
--- Q19: Drop check costrainst on rpice if it exists
+-- Q19: Drop check costrainst on rpice if it exist
 ALTER TABLE Trips
 DROP CONSTRAINT chk_price_positive;
 
 -- Q 20 : Drop the payments table entirely
-drop table if exists payments;
+--drop table if exists payments;
 
