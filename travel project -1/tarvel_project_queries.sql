@@ -119,6 +119,10 @@ UPDATE Payments
 SET PaymentMode = 'Cash'
 WHERE PaymentMode IS NULL;
 
-INSERT INTO Payments (PaymentID, BookingID, AmountPaid, PaymentMode)
-VALUES (9999, 1, 10000.00, 'Bitcoin');
+SELECT * FROM Customers;
 
+SELECT * FROM Trips;
+
+SELECT * FROM Bookings;
+
+SELECT * FROM Payments;
