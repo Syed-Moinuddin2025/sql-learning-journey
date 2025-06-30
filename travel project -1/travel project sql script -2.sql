@@ -39,3 +39,38 @@ DROP CONSTRAINT DF__customers__Loyal__3E52440B;
 
 ALTER TABLE Customers
 DROP COLUMN LoyaltyPoints;
+
+ALTER TABLE Bookings
+ADD CONSTRAINT FK_Bookings_Customers
+FOREIGN KEY (CustomerID)
+REFERENCES Customers(CustomerID);
+
+
+ALTER TABLE Bookings
+ADD CONSTRAINT FK_Bookings_Trips
+FOREIGN KEY (TripID)
+REFERENCES Trips(TripID);
+
+SELECT 
+    f.name AS ForeignKey,
+    OBJECT_NAME(f.parent_object_id) AS TableName,
+    COL_NAME(fc.parent_object_id, fc.parent_column_id) AS ColumnName,
+    OBJECT_NAME (f.referenced_object_id) AS ReferenceTable,
+    COL_NAME(fc.referenced_object_id, fc.referenced_column_id) AS ReferenceColumn
+FROM 
+    sys.foreign_keys AS f
+INNER JOIN 
+    sys.foreign_key_columns AS fc 
+    ON f.object_id = fc.constraint_object_id
+WHERE OBJECT_NAME(f.parent_object_id) = 'Bookings';
+
+CREATE TABLE Payments (
+    PaymentID INT PRIMARY KEY,
+    BookingID INT,
+    AmountPaid DECIMAL(10,2) NOT NULL,
+    PaymentMode VARCHAR(50),
+    PaymentDate DATETIME CONSTRAINT DF_PaymentDate DEFAULT GETDATE(),
+    CONSTRAINT FK_Payments_Bookings FOREIGN KEY (BookingID)
+        REFERENCES Bookings(BookingID),
+    CONSTRAINT CHK_PaymentMode CHECK (PaymentMode IN ('UPI', 'Credit Card', 'Net Banking', 'Cash'))
+);
