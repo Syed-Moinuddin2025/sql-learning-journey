@@ -102,3 +102,4 @@ FROM movies m
 JOIN d_company dc ON m.d_company_id = dc.id
 WHERE dc.company_name IN ('Warner Bros.', 'Universal Pictures', '20th Century Fox');
  
+ 
