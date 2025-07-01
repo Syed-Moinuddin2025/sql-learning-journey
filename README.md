@@ -125,31 +125,45 @@ This project includes employee performance and departmental sales data.
 
 ---
 
-## 🍕 7️⃣ Pizza Sales Project
-
+## 🍕 7️⃣ Pizza Sales Analysis Project
 Analyze fast food orders including item-wise sales, revenue, and daily trends.
+Objective: Analyze Pizza Hut-style restaurant sales using 4 CSV files:
 
-### 📘 Pizza Sales Project: Learning Outcomes
+pizzas.csv
 
-- Using `GROUP BY`, `ORDER BY`, and `HAVING`  
-- Calculating most sold items  
-- Time-based filtering (daily/monthly)  
+pizza_types.csv
 
-📌 _Coming soon_
+orders.csv
+
+order_details.csv
+
+Sample KPIs & Queries:
+
+Total revenue and orders
+
+Top-selling pizzas and categories
+
+Daily and hourly trends
+
+Revenue and quantity by size, type, and category
+
+🔍 Highlights: Most expensive pizza, most common size, revenue by hour, and category-level metrics.
 
 ---
 
-## 🛍️ 8️⃣ Retail Sales Analysis Project
+## 🛒 Blinkit Sales Analysis Project
 
-A complete time-series project focused on retail KPIs and trend analysis.
+Objective: Analyze Blinkit grocery sales from a structured table blinkit_data.
 
-### 📘 Retail Sales Analysis Project: Learning Outcomes
+Insights Generated:
 
-- Time-series queries using `DATEPART`, `FORMAT`  
-- Ranking using `ROW_NUMBER`, `RANK`  
-- Building dashboards with SQL outputs  
+Total sales, average sales, ratings
 
-📌 _Coming soon_
+KPI comparison by item type, fat content, location, and year
+
+Advanced metrics: Pivot, % sales contribution, visibility effect, ranking
+
+📊 Highlights: Low Fat vs Regular sales, top item types, outlet size/location impact
 
 ---
 
