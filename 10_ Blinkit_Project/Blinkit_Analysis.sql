@@ -1,6 +1,9 @@
---•	See all the data imported:
+-- Blinkit Analysis SQL Script
+-- Importing the data from the CSV file into a SQL table named blinkit_data
+
+--	See all the data imported:
 select * from blinkit_data
-/*•	DATA CLEANING:
+/*	DATA CLEANING:
 Cleaning the Item_Fat_Content field ensures data consistency and accuracy in analysis. The presence of multiple variations of the same category (e.g., LF, low fat vs. Low Fat) can cause issues in reporting, aggregations, and filtering. By standardizing these values, we improve data quality, making it easier to generate insights and maintain uniformity in our datasets.
 */
 UPDATE blinkit_data
@@ -46,14 +49,15 @@ SELECT
 		FROM blinkit_data
 		WHERE Outlet_Establishment_Year =2022
 
-/*1. Total Sales by Fat Content:
-	Objective: Analyze the impact of fat content on total sales.
+/*Objective: Analyze the impact of fat content on total sales.
 	Additional KPI Metrics: Assess how other KPIs (Average Sales, Number of Items, Average Rating) vary with fat content.*/
-
+	
+--1. Total Sales by Fat Content:
 SELECT Item_Fat_Content, CAST(SUM(Total_Sales) AS DECIMAL(10,2)) AS Total_Sales
 	FROM blinkit_data
 	GROUP BY Item_Fat_Content
 ORDER BY Total_Sales DESC
+--
 
 SELECT Item_Fat_Content,
 		CAST(SUM(Total_Sales) AS DECIMAL(10,2)) AS Total_Sales,
@@ -74,9 +78,8 @@ WHERE Outlet_Establishment_Year =2022
 GROUP BY Item_Fat_Content
 ORDER BY Total_Sales DESC
 --
-/*2. Total Sales by Item Type:
-	Objective: Identify the performance of different item types in terms of total sales.
-	Additional KPI Metrics: Assess how other KPIs (Average Sales, Number of Items, Average Rating) vary with fat content.*/
+/*	Objective: Identify the performance of different item types in terms of total sales.Additional KPI Metrics: Assess how other KPIs (Average Sales, Number of Items, Average Rating) vary with fat content.*/
+--2. Total Sales by Item Type:
 
 SELECT Item_Type, CAST(SUM(Total_Sales) AS DECIMAL(10,2)) AS Total_Sales
 		FROM blinkit_data
