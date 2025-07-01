@@ -128,8 +128,27 @@ GROUP BY c.CustomerID, c.Name
 ORDER BY TotalSpent DESC
 OFFSET 0 ROWS FETCH NEXT 10 ROWS ONLY;
 
+--
 SELECT 
     COUNT(*) AS TotalCustomers,
     COUNT(Phone) AS WithPhone,
     COUNT(*) - COUNT(Phone) AS MissingPhone
 FROM Customers;
+
+--
+SELECT 
+    Country,
+    LEFT(Phone, CHARINDEX('-', Phone)) AS CodePrefix,
+    COUNT(*) AS TotalCustomers
+FROM Customers
+GROUP BY 
+    Country,
+    LEFT(Phone, CHARINDEX('-', Phone))
+ORDER BY Country;
+--
+SELECT *
+FROM (
+    SELECT *, ROW_NUMBER() OVER (PARTITION BY Country ORDER BY CustomerID) AS rn
+    FROM Customers
+) AS x
+WHERE rn <= 3;

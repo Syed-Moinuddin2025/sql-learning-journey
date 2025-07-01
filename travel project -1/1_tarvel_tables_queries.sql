@@ -90,6 +90,7 @@ SELECT
 FROM Bookings;
 
 SELECT COUNT(*) FROM Payments;
+
 SELECT TOP 10 * FROM Payments ORDER BY PaymentDate DESC;
 
 SELECT 
@@ -124,21 +125,6 @@ WHERE Phone NOT LIKE '+%';
 
 
 
-SELECT 
-    Country,
-    LEFT(Phone, CHARINDEX('-', Phone)) AS CodePrefix,
-    COUNT(*) AS TotalCustomers
-FROM Customers
-GROUP BY 
-    Country,
-    LEFT(Phone, CHARINDEX('-', Phone))
-ORDER BY Country;
 
-SELECT *
-FROM (
-    SELECT *, ROW_NUMBER() OVER (PARTITION BY Country ORDER BY CustomerID) AS rn
-    FROM Customers
-) AS x
-WHERE rn <= 3;
 
 SELECT * FROM Customers
