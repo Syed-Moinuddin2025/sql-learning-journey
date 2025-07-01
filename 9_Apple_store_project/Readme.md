@@ -1,4 +1,7 @@
 # 🍎 Apple Retail Store — SQL Analytics Project
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Syed-Moinuddin2025/sql-learning-journey/main/images/image55.png" alt="SQL Learning Banner" width="800" height="auto">
+</div>
 
 Welcome to the **Apple Store SQL Analytics Project** — a complete SQL-based data analysis solution for retail business intelligence. This project simulates real-world operations of Apple retail stores and includes end-to-end SQL scripts, insights, and KPIs.
 
