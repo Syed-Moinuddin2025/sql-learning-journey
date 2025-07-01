@@ -302,6 +302,33 @@ VALUES
 (299, 'Apple Store Bamako Downtown', 'Bamako', 'Mali'),
 (300, 'Apple Store Suva Lagoon', 'Suva', 'Fiji');
 
+INSERT INTO stores (store_id, store_name, city, country)
+VALUES
+(301, 'Apple Store Port Moresby', 'Port Moresby', 'Papua New Guinea'),
+(302, 'Apple Store Wellington Central', 'Wellington', 'New Zealand'),
+(303, 'Apple Store Christchurch East', 'Christchurch', 'New Zealand'),
+(304, 'Apple Store Auckland North', 'Auckland', 'New Zealand'),
+(305, 'Apple Store Hamilton Central', 'Hamilton', 'New Zealand'),
+(306, 'Apple Store Dunedin South', 'Dunedin', 'New Zealand'),
+(307, 'Apple Store Invercargill West', 'Invercargill', 'New Zealand'),
+(308, 'Apple Store Tauranga Bayfair', 'Tauranga', 'New Zealand'),
+(309, 'Apple Store Napier Hastings', 'Napier Hastings', 'New Zealand'),
+(310, 'Apple Store Rotorua Lakeside', 'Rotorua', 'New Zealand');
+
+INSERT INTO stores (store_id, store_name, city, country)
+VALUES
+(311, 'Apple Store Honolulu', 'Honolulu', 'USA'),
+(312, 'Apple Store Anchorage', 'Anchorage', 'USA'),
+(313, 'Apple Store Fairbanks', 'Fairbanks', 'USA'),
+(314, 'Apple Store Juneau', 'Juneau', 'USA'),
+(315, 'Apple Store Sitka', 'Sitka', 'USA'),
+(316, 'Apple Store Ketchikan', 'Ketchikan', 'USA'),
+(317, 'Apple Store Kodiak', 'Kodiak', 'USA'),
+(318, 'Apple Store Bethel', 'Bethel', 'USA'),
+(319, 'Apple Store Nome', 'Nome', 'USA'),
+(320, 'Apple Store Barrow', 'Barrow', 'USA');
+
+
 --🔹 2. Insert Data into category
 INSERT INTO category (category_id, category_name)
 VALUES
