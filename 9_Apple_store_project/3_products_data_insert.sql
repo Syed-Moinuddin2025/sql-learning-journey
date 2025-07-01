@@ -201,3 +201,6 @@ VALUES
 (308, 'MacBook Edge', 2, '2025-11-25', 1499.00),
 (309, 'iPad Solar', 3, '2025-10-30', 769.00),
 (310, 'Apple Watch Nova Titanium', 4, '2025-12-31', 1049.00);
+
+-- Verify the inserted data
+SELECT * FROM products;
