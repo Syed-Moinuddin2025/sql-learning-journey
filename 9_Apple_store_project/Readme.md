@@ -1,7 +1,8 @@
 # 🍎 Apple Retail Store — SQL Analytics Project
 
-<p align="center"></p>
-![Apple Logo](https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg)
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Logo" width="100">
+</p>
 
 Welcome to the **Apple Store SQL Analytics Project** — a complete SQL-based data analysis solution for retail business intelligence. This project simulates real-world operations of Apple retail stores and includes end-to-end SQL scripts, insights, and KPIs.
 
