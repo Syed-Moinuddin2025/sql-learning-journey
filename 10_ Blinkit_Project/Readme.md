@@ -1,11 +1,5 @@
 # 🛒 Blinkit Sales Analysis - SQL Project
 
-<div align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Blinkit_logo.svg" alt="Blinkit Logo" width="300" />
-</div>
-
----
-
 ## 📌 Project Overview
 
 This SQL-based analysis explores sales data from Blinkit, one of India’s leading online grocery delivery platforms. Using raw transactional data, we clean, transform, and analyze key performance indicators (KPIs) to gain actionable business insights.
@@ -61,9 +55,6 @@ Assumed table name: `blinkit_data`
 blinkit_project/
 ├── blinkit_analysis_final.sql   -- Final SQL Script with all KPIs
 └── README.md                    -- Project Overview & Documentation
-
-
-```
 
 ---
 
