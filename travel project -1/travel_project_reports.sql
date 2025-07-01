@@ -127,3 +127,9 @@ JOIN Payments p ON b.BookingID = p.BookingID
 GROUP BY c.CustomerID, c.Name
 ORDER BY TotalSpent DESC
 OFFSET 0 ROWS FETCH NEXT 10 ROWS ONLY;
+
+SELECT 
+    COUNT(*) AS TotalCustomers,
+    COUNT(Phone) AS WithPhone,
+    COUNT(*) - COUNT(Phone) AS MissingPhone
+FROM Customers;

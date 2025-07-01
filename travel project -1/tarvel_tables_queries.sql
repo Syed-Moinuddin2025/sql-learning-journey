@@ -15,7 +15,7 @@ DROP TABLE IF EXISTS Customers;
 
 
 BULK INSERT Customers
-FROM 'D:\\SQL Data\\customers_utf8.csv'
+FROM 'D:\sql_python_mastery\sql_journey\travel project -1\customers_export.csv'
 WITH (
     FIRSTROW = 2,
     FIELDTERMINATOR = '\t',
@@ -24,7 +24,9 @@ WITH (
     TABLOCK
 );
 
-SELECT * FROM Customers
+-- drop TABLE Customers
+
+SELECT top 5 * FROM Customers
 
 CREATE TABLE Trips (
     TripID INT PRIMARY KEY,
@@ -90,3 +92,53 @@ FROM Bookings;
 SELECT COUNT(*) FROM Payments;
 SELECT TOP 10 * FROM Payments ORDER BY PaymentDate DESC;
 
+SELECT 
+    f.name AS ForeignKey,
+    OBJECT_NAME(f.parent_object_id) AS TableName,
+    COL_NAME(fc.parent_object_id, fc.parent_column_id) AS ColumnName
+FROM 
+    sys.foreign_keys AS f
+JOIN 
+    sys.foreign_key_columns AS fc 
+    ON f.object_id = fc.constraint_object_id
+WHERE 
+    OBJECT_NAME(f.referenced_object_id) = 'Customers';
+
+ALTER TABLE Bookings
+DROP CONSTRAINT FK__Bookings__Custom__7E37BEF6;
+
+SELECT DISTINCT Country,Phone
+FROM Customers;
+
+UPDATE Customers
+SET Phone = 
+    CASE 
+        WHEN Country = 'India' THEN '+91-' + Phone
+        WHEN Country = 'USA' THEN '+1-' + Phone
+        WHEN Country = 'UK' THEN '+44-' + Phone
+        WHEN Country = 'Canada' THEN '+1-' + Phone
+        WHEN Country = 'Australia' THEN '+61-' + Phone
+        ELSE Phone
+    END
+WHERE Phone NOT LIKE '+%';
+
+
+
+SELECT 
+    Country,
+    LEFT(Phone, CHARINDEX('-', Phone)) AS CodePrefix,
+    COUNT(*) AS TotalCustomers
+FROM Customers
+GROUP BY 
+    Country,
+    LEFT(Phone, CHARINDEX('-', Phone))
+ORDER BY Country;
+
+SELECT *
+FROM (
+    SELECT *, ROW_NUMBER() OVER (PARTITION BY Country ORDER BY CustomerID) AS rn
+    FROM Customers
+) AS x
+WHERE rn <= 3;
+
+SELECT * FROM Customers
