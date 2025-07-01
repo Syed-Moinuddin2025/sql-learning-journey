@@ -101,3 +101,5 @@ VALUES
 (398, '2023-07-03', 395, 'Paid Repaired'),
 (399, '2024-04-13', 397, 'In Progress'),
 (400, '2025-06-30', 400, 'Paid Repaired');
+-- Verify the inserted data
+SELECT * FROM warranty;
