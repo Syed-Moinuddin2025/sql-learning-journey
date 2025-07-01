@@ -20,99 +20,144 @@ It is ideal for:
 
 ## 📁 Projects Included
 
-### 1️⃣ [📁 Project 1 – Inventory](./1_project1_inventory)
+# 📦 1️⃣ Inventory Project
 
-A mini inventory system featuring Categories and Products tables.
+This project simulates a basic inventory system with two main tables: `Categories` and `Products`. It is ideal for practicing normalization, constraints, and basic SQL queries.
 
-**What you’ll learn:**
+## 📘 Learning Outcomes
 
-* Designing normalized tables with primary and foreign keys
-* Inserting and managing sample data
-* Writing queries using SELECT, JOIN, WHERE, SUM, AVG, COUNT
+* Creating normalized tables with PK and FK
+* Performing JOIN queries
+* Aggregating data using SUM, COUNT, AVG
 
-📂 Files:
+## 📂 Files Included
 
-* [`01_create_tables.sql`](./1_project1_inventory/01_create_tables.sql)
-* [`02_insert_data.sql`](./1_project1_inventory/02_insert_data.sql)
-* [`03_basic_queries.sql`](./1_project1_inventory/03_basic_queries.sql)
-* [`04_Basic_Inventory_Queries_Result.ipynb`](./1_project1_inventory/04_Basic_Inventory_Queries_Result.ipynb)
-* [`Readme.md`](./1_project1_inventory/Readme.md)
-
----
-
-### 2️⃣ [📁 Project 2 – Employee Records](./2_project2_employeerecords)
-
-A complete employee database system with HR-focused query practice.
-
-📄 Files:
-
-* [`01_create_tables.sql`](./2_project2_employeerecords/01_create_tables.sql)
-* [`02_insert_data.sql`](./2_project2_employeerecords/02_insert_data.sql)
-* [`03_basic_queries.sql`](./2_project2_employeerecords/03_basic_queries.sql)
-* [`04_intermediate_queries.sql`](./2_project2_employeerecords/04_intermediate_queries.sql)
-* [`05_Employee_Queries_Result.ipynb`](./2_project2_employeerecords/05_Employee_Queries_Result.ipynb)
-* [`README.md`](./2_project2_employeerecords/README.md)
-
-🚧 Next Steps: Advanced HR reports (attendance, promotions)
+* `01_create_tables.sql`
+* `02_insert_data.sql`
+* `03_basic_queries.sql`
+* `04_Basic_Inventory_Queries_Result.ipynb`
 
 ---
 
-### 3️⃣ [📁 Project 3 – Movie Ratings](./3_project3_movieratings)
+# 👨‍💼 2️⃣ Employee Records Project
 
-Analyze and manage movie ratings and production companies.
+An HR-style database that helps simulate employee management, departments, and salaries. Great for learning joins, filters, and conditional queries.
 
-**What you’ll learn:**
+## 📘 Learning Outcomes
 
-* Using joins across multiple tables (movies, companies, ratings)
-* Applying filters, grouping, and aggregate functions
-* Importing and cleaning real-world CSV data
+* Filtering and grouping employees
+* Performing JOINs between related tables
+* Intermediate HR reporting
 
-📄 Files:
+## 📂 Files Included
 
-* [`01_create_tables.sql`](./3_project3_movieratings/01_create_tables.sql)
-* [`02_import_data.sql`](./3_project3_movieratings/02_import_data.sql)
-* [`03_queries_analysis.sql`](./3_project3_movieratings/03_queries_analysis.sql)
-* [`README.md`](./3_project3_movieratings/README.md)
-
----
-
-### 4️⃣ [📁 Project 4 – SQL Full Course](./4_sql_full_course)
-
-🚧 Under development – includes beginner to intermediate modules
+* `01_create_tables.sql`
+* `02_insert_data.sql`
+* `03_basic_queries.sql`
+* `04_intermediate_queries.sql`
+* `05_Employee_Queries_Result.ipynb`
 
 ---
 
-### 5️⃣ [📁 Project 5 – Employees Sales Record](./5_employees_sales_record)
+# 🎬 3️⃣ Movie Ratings Project
 
-🚧 Planned project to analyze departmental sales using joins and grouping
+This project is based on analyzing movie data including production companies and user ratings.
 
----
+## 📘 Learning Outcomes
 
-### 6️⃣ [📁 Project 6 – Pizza Sales](./6_pizza_sales_sql)
+* Handling multiple relationships using JOINs
+* Data analysis with aggregation
+* Importing data from CSV and cleaning
 
-🚧 Planned project to analyze fast food orders using group by, top sales, and KPIs
+## 📂 Files Included
 
----
-
-### 7️⃣ [📁 Project 7 – Retail Sales Analytics P1](./7_retail_sales_analysis_p1)
-
-🚧 A time-series and trend-based sales analytics SQL project
-
----
-
-## 🧰 Tools Used
-
-* **SQL Server Management Studio (SSMS)**
-* **Azure Data Studio**
-* **Git & GitHub**
+* `01_create_tables.sql`
+* `02_import_data.sql`
+* `03_queries_analysis.sql`
 
 ---
 
-## 🙌 Contributions Welcome
+# 📚 4️⃣ SQL Full Course
 
-If you'd like to contribute query ideas or request a new dataset, feel free to raise an issue or fork this repo.
+A complete beginner-to-advanced SQL learning series in one place.
+
+## 📘 Learning Outcomes
+
+* Basic to intermediate SQL queries
+* Using SQL Server and Azure Data Studio
+* Foundation for all other projects
+
+📌 Still under active development
 
 ---
+
+# ✈️ 5️⃣ Travel Project
+
+Travel booking mini-project with Customers, Trips, Bookings, and Payments.
+
+## 📘 Learning Outcomes
+
+* Foreign keys and relationships
+* Data import using `BULK INSERT`
+* Adding business rules with CHECK constraints
+
+## 📂 Files Included
+
+* `01_create_tables.sql`
+* `02_bulk_insert_scripts.sql`
+* `03_queries.sql`
+* `Travel_Project_Reports.sql`
+
+---
+
+# 💼 6️⃣ Employee Sales Project
+
+This project includes employee performance and departmental sales data.
+
+## 📘 Learning Outcomes
+
+* Aggregate KPIs
+* Department-based filtering
+* Advanced grouping and reports
+
+📌 Coming soon
+
+---
+
+# 🍕 7️⃣ Pizza Sales Project
+
+Analyze fast food orders including item-wise sales, revenue, and daily trends.
+
+## 📘 Learning Outcomes
+
+* Using GROUP BY, ORDER BY, and HAVING
+* Calculating most sold items
+* Time-based filtering (daily/monthly)
+
+📌 Coming soon
+
+---
+
+# 🛍️ 8️⃣ Retail Sales Analysis Project
+
+A complete time-series project focused on retail KPIs and trend analysis.
+
+## 📘 Learning Outcomes
+
+* Time-series queries using DATEPART, FORMAT
+* Ranking using `ROW_NUMBER`, `RANK`
+* Building dashboards with SQL outputs
+
+📌 Coming soon
+
+---
+
+> ⚠️ All projects use Microsoft SQL Server and are compatible with Azure Data Studio.
+
+
+
+---
+
 
 ## ☕ Support My Work
 
@@ -135,6 +180,6 @@ If you find this useful, consider supporting me:
 
 
 ## 💡 Tip:
-Practice regularly and track your progress by running queries on real data!
-
+  Practice regularly and track your progress by running queries on real data!
+🎯 Practice regularly, use version control, and grow your confidence in SQL!
 ---
