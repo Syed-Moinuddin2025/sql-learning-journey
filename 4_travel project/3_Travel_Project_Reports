@@ -1,0 +1,89 @@
+-- ============================================
+-- Travel Project Reporting Queries
+-- File: Travel_Project_Reports.sql
+-- Author: Syed Moin (Learn More & Earn More)
+-- ============================================
+
+-- 1. Total number of customers
+SELECT COUNT(*) AS TotalCustomers FROM Customers;
+
+-- 2. Total number of trips
+SELECT COUNT(*) AS TotalTrips FROM Trips;
+
+-- 3. Total number of bookings
+SELECT COUNT(*) AS TotalBookings FROM Bookings;
+
+-- 4. Total amount received from payments
+SELECT SUM(AmountPaid) AS TotalRevenue FROM Payments;
+
+-- 5. Total bookings by destination
+SELECT T.Destination, COUNT(*) AS TotalBookings
+FROM Bookings B
+JOIN Trips T ON B.TripID = T.TripID
+GROUP BY T.Destination
+ORDER BY TotalBookings DESC;
+
+-- 6. Number of customers by country
+SELECT Country, COUNT(*) AS TotalCustomers
+FROM Customers
+GROUP BY Country
+ORDER BY TotalCustomers DESC;
+
+-- 7. Payment mode summary
+SELECT PaymentMode, COUNT(*) AS TotalPayments
+FROM Payments
+GROUP BY PaymentMode;
+
+-- 8. International vs Domestic trip count
+SELECT 
+    CASE WHEN IsInternational = 1 THEN 'International' ELSE 'Domestic' END AS TripType,
+    COUNT(*) AS TotalTrips
+FROM Trips
+GROUP BY IsInternational;
+
+-- 9. Highest priced trip
+SELECT TOP 1 TripID, Destination, Price
+FROM Trips
+ORDER BY Price DESC;
+
+-- 10. Customers who never booked a trip
+SELECT C.CustomerID, C.Name, C.Country
+FROM Customers C
+LEFT JOIN Bookings B ON C.CustomerID = B.CustomerID
+WHERE B.BookingID IS NULL;
+
+-- 11. Average number of people per booking
+SELECT ROUND(AVG(NumPeople), 2) AS AvgPeoplePerBooking
+FROM Bookings;
+
+-- 12. Most recent booking details
+SELECT TOP 5 B.BookingID, C.Name, T.Destination, B.BookingDate
+FROM Bookings B
+JOIN Customers C ON B.CustomerID = C.CustomerID
+JOIN Trips T ON B.TripID = T.TripID
+ORDER BY B.BookingDate DESC;
+
+-- 13. Bookings with total payment amount
+SELECT B.BookingID, C.Name, T.Destination, P.AmountPaid
+FROM Payments P
+JOIN Bookings B ON P.BookingID = B.BookingID
+JOIN Customers C ON B.CustomerID = C.CustomerID
+JOIN Trips T ON B.TripID = T.TripID;
+
+-- 14. Trip-wise total revenue
+SELECT T.Destination, SUM(P.AmountPaid) AS Revenue
+FROM Payments P
+JOIN Bookings B ON P.BookingID = B.BookingID
+JOIN Trips T ON B.TripID = T.TripID
+GROUP BY T.Destination
+ORDER BY Revenue DESC;
+
+-- 15. Daily booking count
+SELECT BookingDate, COUNT(*) AS Bookings
+FROM Bookings
+GROUP BY BookingDate
+ORDER BY BookingDate DESC;
+
+-- ============================================
+-- End of Report
+-- ============================================
