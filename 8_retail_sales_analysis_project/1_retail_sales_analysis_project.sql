@@ -1,23 +1,4 @@
--- SQL Retail Sales Analysis - P1
-CREATE DATABASE sql_project_p1;
 
-
--- Create TABLE
-DROP TABLE IF EXISTS retail_sales;
-CREATE TABLE retail_sales
-            (
-                transaction_id INT PRIMARY KEY,	
-                sale_date DATE,	 
-                sale_time TIME,	
-                customer_id	INT,
-                gender	VARCHAR(15),
-                age	INT,
-                category VARCHAR(15),	
-                quantity	INT,
-                price_per_unit FLOAT,	
-                cogs	FLOAT,
-                total_sale FLOAT
-            );
 
 SELECT TOP 5 * FROM retail_sales
 
@@ -224,6 +205,45 @@ SELECT
 FROM hourly_sale
 GROUP BY shift;
 
+--Q.11: Find the total cost of goods sold (COGS) per category
+
+SELECT 
+    category,
+    SUM(cogs) AS total_cogs
+FROM retail_sales
+GROUP BY category;
+
+--Q.12: Find the first and last transaction date in the data
+
+SELECT 
+    MIN(sale_date) AS first_transaction_date,
+    MAX(sale_date) AS last_transaction_date
+FROM retail_sales;
+
+--Q.13: List all customers who made more than 1 purchase
+
+SELECT 
+    customer_id
+FROM retail_sales
+GROUP BY customer_id
+HAVING COUNT(*) > 1;
+
+--Q.14: Find average quantity sold per transaction for each category
+
+SELECT 
+    category,
+    AVG(quantity) AS avg_quantity_per_transaction
+FROM retail_sales
+GROUP BY category;
+
+--Q.15: Get sales summary by gender (total_sales, avg_sale, transaction count)
+SELECT 
+    gender,
+    SUM(total_sale) AS total_sales,
+    AVG(total_sale) AS avg_sale,
+    COUNT(*) AS transaction_count
+FROM retail_sales
+GROUP BY gender ;
 -- End of project
 
 
