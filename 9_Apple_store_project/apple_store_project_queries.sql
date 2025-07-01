@@ -113,24 +113,24 @@ ORDER BY total_unit_sold DESC;
 -- 3. Identify how many sales occurred in December 2023.
 SELECT COUNT(*) AS total_sales
 FROM sales
-WHERE TO_CHAR(sale_date, 'YYYY-MM') = '2023-12';
+WHERE FORMAT(sale_date, 'yyyy-MM') = '2023-12';
 
 
 -- 4. Determine how many stores have never had a warranty claim filed.
 SELECT COUNT(*) AS total_store
 FROM stores
 WHERE store_id NOT IN (
-						SELECT DISTINCT s.store_id
-						FROM sales AS s
-						RIGHT JOIN warranty AS w
-						ON s.sale_id = w.sale_id
+			SELECT DISTINCT s.store_id
+			FROM sales AS s
+			RIGHT JOIN warranty AS w
+			ON s.sale_id = w.sale_id
 						);
 
 -- 5. Calculate the percentage of warranty claims marked as "Rejected"
 SELECT 
-ROUND(
-    COUNT(claim_id) / (SELECT COUNT(*) FROM warranty)::NUMERIC * 100, 2
-) AS rejected_percentage
+    ROUND(
+        CAST(COUNT(claim_id) AS FLOAT) / NULLIF((SELECT COUNT(*) FROM warranty), 0) * 100, 2
+    ) AS rejected_percentage
 FROM warranty
 WHERE repair_status = 'Rejected';
 
@@ -161,12 +161,15 @@ FROM warranty
 WHERE EXTRACT(YEAR FROM claim_date) = 2024;
 
 -- 10. For each store, identify the best-selling day based on highest quantity sold.
-SELECT store_id, day_name, total_quantity 
+SELECT store_id, DATENAME(WEEKDAY, sale_date) AS day_name, total_quantity
 FROM (
-				SELECT store_id, to_char(sale_date, 'day') AS day_name, sum(quantity) AS total_quantity,
-				RANK() OVER(PARTITION BY store_id ORDER BY sum(quantity) DESC) AS rank
-				FROM sales
-				GROUP BY 1,2
+    SELECT 
+        store_id, 
+        DATENAME(WEEKDAY, sale_date) AS day_name, 
+        SUM(quantity) AS total_quantity,
+        RANK() OVER(PARTITION BY store_id ORDER BY SUM(quantity) DESC) AS rank
+    FROM sales
+    GROUP BY store_id, DATENAME(WEEKDAY, sale_date)
 ) AS t
 WHERE rank = 1;
 
