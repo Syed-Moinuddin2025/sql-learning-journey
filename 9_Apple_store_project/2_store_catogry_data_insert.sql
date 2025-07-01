@@ -270,7 +270,7 @@ VALUES
 (267, 'Apple Store Ramallah Heights', 'Ramallah', 'Palestine'),
 (268, 'Apple Store Sana Tower', 'Sana Tower', 'Yemen'),
 (269, 'Apple Store Aden Harbor', 'Aden', 'Yemen'),
-(270, 'Apple Store Tehran Grand Bazaar', 'Tehran', 'Iran'),
+(270, 'Apple Store Grand Bazaar', 'Tehran', 'Iran'),
 (271, 'Apple Store Mashhad Silk Road', 'Mashhad', 'Iran'),
 (272, 'Apple Store Shiraz Garden', 'Shiraz', 'Iran'),
 (273, 'Apple Store Tabriz Valley', 'Tabriz', 'Iran'),
@@ -315,3 +315,6 @@ VALUES
 (8, 'Gaming'),
 (9, 'Software'),
 (10, 'Services');
+
+select * from stores;
+select * from category;
