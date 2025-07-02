@@ -115,14 +115,16 @@ Travel booking mini-project with `Customers`, `Trips`, `Bookings`, and `Payments
 
 This project includes employee performance and departmental sales data.
 
-### 📘 Employee Sales Project: Learning Outcomes
+**Objective:** Practice all major SQL concepts using two custom tables: `employees` and `quarterly_sales`
 
-- Aggregate KPIs  
-- Department-based filtering  
-- Advanced grouping and reports  
+**Topics Covered:**
+- Basic SELECT queries
+- JOIN operations for sales calculation
+- Salary updates, filtering, and aggregation
+- Subqueries and top/bottom performers
+- ALTER/UPDATE/DELETE operations
 
-📌 _Coming soon_
-
+> 💼 _Highlights_: Realistic queries for employee management, sales tracking, and HR analytics.
 ---
 
 ## 🍕 7️⃣ Pizza Sales Analysis Project
