@@ -22,6 +22,10 @@ SELECT DISTINCT product_name FROM products;
 -- 5️⃣ Total number of sales
 SELECT COUNT(*) AS total_sales FROM sales;
 
+SELECT SUM(s.quantity * p.price) AS total_sales_value
+FROM sales s
+JOIN products p ON s.product_id = p.product_id;
+
 
 ---------------------------------------------
 -- ⚙️ Section 2: Performance Testing & Indexing
