@@ -25,43 +25,44 @@ FROM sales;
 
 -- Planning Time: 0.087 ms
 -- Execution Time: 206.932 ms
-EXPLAIN ANALYZE
 SELECT * 
 FROM sales 
-WHERE product_id = 'P-40';
+WHERE product_id = 310;
 
 
 CREATE INDEX sales_product_id ON sales(product_id);
 
 -- Planning Time: 1.417 ms
 -- Execution Time: 8.865 ms
-EXPLAIN ANALYZE
+SET STATISTICS IO ON;
+SET STATISTICS TIME ON;
+
 SELECT * 
 FROM sales 
-WHERE product_id = 'P-40';
+WHERE product_id = 201;
+
+SET STATISTICS IO OFF;
+SET STATISTICS TIME OFF;
 
 
 -- Planning Time: 0.096 ms
 -- Execution Time: 156.822 ms
-EXPLAIN ANALYZE
+
 SELECT * 
 FROM sales 
-WHERE store_id = 'ST-31';
+WHERE store_id = 10;
 
 CREATE INDEX sales_store_id ON sales(store_id)
 
 -- Planning Time: 1.452 ms
 -- Execution Time: 9.076 ms
-
-EXPLAIN ANALYZE
-SELECT * 
+    SELECT * 
 FROM sales 
-WHERE store_id = 'ST-31';
+WHERE store_id = 31;
 
 
 -- Planning Time: 0.129 ms
 -- Execution Time: 133.589 ms
-EXPLAIN ANALYZE
 SELECT * 
 FROM sales 
 WHERE sale_date = '2020-04-18';
@@ -78,19 +79,23 @@ WHERE sale_date = '2020-04-18';
 
 -- Planning Time: 0.105 ms
 -- Execution Time: 260.194 ms
-EXPLAIN ANALYZE
 SELECT * 
-FROM sales 
-WHERE quantity > 2
+FROM sales  
+WHERE quantity > 2;
 
 CREATE INDEX sales_quantity ON sales(quantity);
 
 -- Planning Time: 0.128 ms
 -- Execution Time: 161.133 ms
-EXPLAIN ANALYZE
+SET STATISTICS IO ON;
+SET STATISTICS TIME ON;
+
 SELECT * 
 FROM sales 
-WHERE quantity > 2
+WHERE quantity > 2;
+
+SET STATISTICS IO OFF;
+SET STATISTICS TIME OFF;
 
 --------------------------------
 -- sql basic queries
@@ -293,7 +298,8 @@ ORDER BY total_unit_sold DESC;
 -- 22. Identify how many sales occurred in December 2023.
 SELECT COUNT(*) AS total_sales
 FROM sales
-WHERE FORMAT(sale_date, 'yyyy-MM') = '2023-12';         
+WHERE FORMAT(sale_date, 'yyyy-MM') = '2023-12';  
+       
 -- 23. Determine how many stores have never had a warranty claim filed.
 SELECT COUNT(*) AS total_store
 FROM stores
