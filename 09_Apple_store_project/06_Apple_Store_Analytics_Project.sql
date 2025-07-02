@@ -460,3 +460,13 @@ SELECT
     ROUND(CAST(completed_claims AS FLOAT) / NULLIF(total_claims, 0) * 100, 2) AS completion_rate
 FROM category_claims
 ORDER BY completion_rate DESC;
+
+-- 4️⃣1️⃣ Top 5 stores by average sales value (last year)
+SELECT 
+    st.country,
+    SUM(s.quantity * p.price) AS total_revenue
+FROM sales AS s
+JOIN stores AS st ON s.store_id = st.store_id
+JOIN products AS p ON s.product_id = p.product_id
+GROUP BY st.country
+ORDER BY total_revenue DESC;

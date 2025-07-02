@@ -345,3 +345,7 @@ VALUES
 
 select * from stores;
 select * from category;
+
+
+
+
