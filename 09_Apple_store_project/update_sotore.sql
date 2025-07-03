@@ -30,6 +30,31 @@ WHERE store_id IN (90,91,92);
 
 
 UPDATE stores
+SET
+  store_name = CASE 
+    WHEN store_id = 81 THEN 'Apple Store Market Mall'
+    WHEN store_id = 78 THEN 'Apple Store Yorkdale'
+    WHEN store_id = 89 THEN 'Apple Store Sherway Gardens'
+    WHEN store_id = 90 THEN 'Apple Store  Fairview'
+    WHEN store_id = 71 THEN 'Apple Store Place Ste-Foy'
+    WHEN store_id = 72 THEN 'Apple Store Masonville'
+     END,
+  city = CASE 
+    WHEN store_id = 81 THEN 'Calgary'
+    WHEN store_id = 78 THEN 'Toronto'
+    WHEN store_id = 89 THEN 'Toronto'
+    WHEN store_id = 90 THEN 'Toronto'
+    WHEN store_id = 71 THEN 'Quebec City'
+    WHEN store_id = 72 THEN 'London'
+      END,
+      country = 'Canada'
+WHERE store_id IN (81,78,89,90,71,72);
+
+
+
+
+
+UPDATE stores
 SET country = 'United States'
 WHERE country = 'USA';
  
