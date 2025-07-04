@@ -28,7 +28,7 @@ This project helps you practice real-world business analysis using SQL. The sche
 9_Apple_store_project/
 ├── 01_create_tables.sql              # Table structure
 ├── 02_insert_data.sql               # Sample data insert
-├── 03_bulk_insert_csv.sql           # CSV import queries
+├── 03_bulk_insert_csv.sql           # 5 CSV files(import queries)
 ├── 04_foreign_keys.sql              # FK constraints setup
 ├── 05_indexes.sql                   # Performance indexes
 ├── 06_analysis_queries.sql          # ✅ Original hand-crafted queries
