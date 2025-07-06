@@ -106,7 +106,11 @@ If you find this useful:
 * [PayPal](https://paypal.me/syedmoinuddin101)
 
 ---
+<div align="center">
+  <img src="https://github.com/Syed-Moinuddin2025/sql-learning-journey/blob/main/07_pizza_sales_project/Images/pizza1.png" width="900" alt="E-commerce Sales Analysis Banner">
+</div>
 
+---
 ## 📬 Contact
 
 **GitHub:** [Syed-Moinuddin2025](https://github.com/Syed-Moinuddin2025)
