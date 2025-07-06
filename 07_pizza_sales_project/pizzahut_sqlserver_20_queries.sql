@@ -1,4 +1,3 @@
-
 --📘 BASIC SQL SERVER QUERIES
 
 -- 1. Total number of orders placed
