@@ -112,3 +112,5 @@ GROUP BY pt.category;
 
 -- 20. Average quantity per order
 SELECT AVG(quantity) AS avg_qty_per_order FROM order_details;
+
+
