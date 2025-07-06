@@ -95,7 +95,17 @@ Each query has been:
 * 📜 Use `01_create_tables.sql` and `02_insert_data.sql` to get started
 
 ---
+## ☕ Support My Work
 
+### If this project helps you learn or build something cool, consider supporting my work!  
+
+### Your support keeps me motivated and helps me continue sharing quality content. 🙌
+
+[![Buy Me a Coffee](https://img.shields.io/badge/☕-Buy_Me_A_Coffee-yellow?style=flat-square)](https://coff.ee/syedmoin)  
+[![PayPal](https://img.shields.io/badge/💰-Donate_via_PayPal-blue?style=flat-square)](https://paypal.me/syedmoinuddin101)
+
+## Thank you so much! 🙏
+---
 ## 📌 What You Can Build On Top
 
 🚀 Add dashboards in Power BI / Excel
