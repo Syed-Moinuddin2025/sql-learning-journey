@@ -1,6 +1,10 @@
 # 🍕 Project 7: Pizza Sales Project (SQL Server)
 
-Welcome to the **Pizza Sales Project** – a hands-on SQL Server project to analyze and generate insights from pizza order data. This project covers basic to intermediate SQL reporting techniques using joins, aggregations, filtering, and time-based queries.
+<div align="center">
+  <img src="https://github.com/Syed-Moinuddin2025/python_Journey/blob/main/E_commerce_%20sales_%20analysis/Images/e-commerce.png" width="800" alt="E-commerce Sales Analysis Banner">
+</div>
+
+## Welcome to the **Pizza Sales Project** – a hands-on SQL Server project to analyze and generate insights from pizza order data. This project covers basic to intermediate SQL reporting techniques using joins, aggregations, filtering, and time-based queries.
 
 ---
 
@@ -40,11 +44,11 @@ order_details.csv
 | File Name                      | Description                                                                |
 | ------------------------------ | -------------------------------------------------------------------------- |
 | `01_pizza_analysis_queries.sql` | Script to create `orders`, `order_details`, `pizzas`, `pizza_types` tables |
-|`  02_Pizza_Sales_Results.ipynb`                              | Sample data for all tables                                                 |
-|                                 | Basic-level insights: revenue, top sellers, sizes, etc.                    |
-| `                               | Revenue by day, category-level insights, order patterns                    |
-| `                                Optional notebook for output visualization                                 |
-| `README.md`                    | Project documentation (this file)                                          |
+|`  02_Pizza_Sales_Results.ipynb`  | Sample data for all tables                                                 |
+|  `README.md`                     | Basic-level insights: revenue, top sellers, sizes, etc.                    |
+|                                | Revenue by day, category-level insights, order patterns                    |
+|                                 |
+|                                | Project documentation (this file)                                          |
 
 ---
 
