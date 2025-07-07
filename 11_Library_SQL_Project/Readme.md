@@ -40,17 +40,11 @@ issue_book → updates book status to no if issued
 
 add_return_records → updates book status to yes on return
 
-📌 Sample Tasks Implemented
-Task ID	Description
-6	CTAS: Create table for each book’s total issues
-11	Books priced above $7
-13	Identify members with books overdue beyond 30 days
-15	Branch performance report (books issued, returned, revenue)
-16	CTAS: Active members who issued books in last 2 months
-17	Top 3 employees who processed most book issues
-18	Members frequently issuing damaged books
-19	Procedure to insert return records and auto-update book status
-20	CTAS: Create table of overdue books with fine calculation ($0.50/day fine)
+<div align="center">
+  <img src=" (https://github.com/Syed-Moinuddin2025/sql-learning-journey/blob/main/11_Library_SQL_Project/Images/lab1.png)" width="900" alt="lab1.png">
+</div>
+
+
 
 📌 Tables: Branch | Employees | Members | Books | Issued_Status | Return_Status
 🔁 Relationships managed using foreign keys.
