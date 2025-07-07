@@ -41,9 +41,10 @@ issue_book → updates book status to no if issued
 add_return_records → updates book status to yes on return
 
 <div align="center">
-  <img src=" (https://github.com/Syed-Moinuddin2025/sql-learning-journey/blob/main/11_Library_SQL_Project/Images/lab1.png)" width="900" alt="lab1.png">
+  <img src="https://github.com/Syed-Moinuddin2025/sql-learning-journey/blob/main/11_Library_SQL_Project/Images/lab1.png" width="900" alt="E-commerce Sales Analysis Banner">
 </div>
 
+ 
 
 
 📌 Tables: Branch | Employees | Members | Books | Issued_Status | Return_Status
