@@ -1,5 +1,7 @@
 # 📚 11_Library_SQL_Project
+
 https://github.com/Syed-Moinuddin2025/sql-learning-journey/blob/main/11_Library_SQL_Project/Images/lab.png
+
 A comprehensive SQL Server-based Library Management System built using relational database concepts. The project includes table creation, data population, CRUD operations, CTAS, advanced analytics, and stored procedures — ideal for mastering SQL in a real-world use case.
 
 # 🗂️ Project Structure
