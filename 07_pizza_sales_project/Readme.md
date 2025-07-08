@@ -1,7 +1,7 @@
 # 🍕 Project 7: Pizza Sales Project (SQL Server)
 
 <div align="center">
-  <img src="https://github.com/Syed-Moinuddin2025/sql-learning-journey/blob/main/07_pizza_sales_project/Images/pizza.png" width="900" alt="E-commerce Sales Analysis Banner">
+  <img src="https://github.com/Syed-Moinuddin2025/sql-learning-journey/blob/main/07_pizza_sales_project/Images/pizzas.png" width="900" alt="E-commerce Sales Analysis Banner">
 </div>
 
 

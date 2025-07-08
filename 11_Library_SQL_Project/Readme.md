@@ -70,6 +70,7 @@ Stored procedure creation and execution
 Real-world scenario simulation for library operations
 
 # 👨‍💻 Author
-Syed Moinuddin
+# Syed Moinuddin
 SQL Developer | Python Learner | Data Analyst
-📎 GitHub Profile
+--
+📎  [GitHub Profile](https://github.com/Syed-Moinuddin2025)
