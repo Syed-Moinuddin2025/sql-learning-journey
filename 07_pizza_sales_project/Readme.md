@@ -1,10 +1,5 @@
 # 🍕 Project 7: Pizza Sales Project (SQL Server)
 
-<div align="center">
-  <img src="https://github.com/Syed-Moinuddin2025/sql-learning-journey/blob/main/07_pizza_sales_project/Images/pizzas.png" width="900" alt="E-commerce Sales Analysis Banner">
-</div>
-
-
 
 ## Welcome to the **Pizza Sales Project** – a hands-on SQL Server project to analyze and generate insights from pizza order data. This project covers basic to intermediate SQL reporting techniques using joins, aggregations, filtering, and time-based queries.
 
@@ -106,9 +101,7 @@ If you find this useful:
 * [PayPal](https://paypal.me/syedmoinuddin101)
 
 ---
-<div align="center">
-  <img src="https://github.com/Syed-Moinuddin2025/sql-learning-journey/blob/main/07_pizza_sales_project/Images/pizza1.png" width="900" alt="E-commerce Sales Analysis Banner">
-</div>
+
 
 ---
 ## 📬 Contact
